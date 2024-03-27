@@ -115,4 +115,4 @@ const sortSongs = () => {
   return userData?.songs;
 };
 
-renderSongs(userData?.songs);
+renderSongs(sortSongs());
