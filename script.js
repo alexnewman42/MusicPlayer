@@ -90,6 +90,12 @@ const playSong = (id) => {
   const song = userData?.songs.find((song) => id === song.id);
   audio.src = song.src;
   audio.title = song.title;
+  if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
+    audio.currentTime = 0;
+  }
+  userData.currentSong = song;
+  playButton.classList.add("playing");
+  audio.play();
 }
 
 const renderSongs = (array) => {
