@@ -96,12 +96,16 @@ const playSong = (id) => {
   userData.currentSong = song;
   playButton.classList.add("playing");
   audio.play();
-}
+};
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
   playButton.classList.remove("playing");
   audio.pause();
+};
+
+const playNextSong = () => {
+
 }
 
 const renderSongs = (array) => {
@@ -122,7 +126,7 @@ const renderSongs = (array) => {
 
 const getCurrentSongIndex = () => {
   return userData?.songs.indexOf(userData?.currentSong);
-}
+};
 
 playButton.addEventListener('click', ()=>{
   if (!userData?.currentSong) {
