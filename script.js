@@ -95,6 +95,8 @@ const playSong = (id) => {
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
+
+  highlightCurrentSong();
   audio.play();
 };
 
@@ -122,6 +124,11 @@ const playPreviousSong = () => {
     playSong(previousSong.id);
   }
 };
+
+const setPlayerDisplay = () => {
+  
+}
+
 
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
