@@ -163,9 +163,9 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
-const getCurrentSongIndex = () => {
-  return userData?.songs.indexOf(userData?.currentSong);
-};
+
+
+const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
 
 playButton.addEventListener('click', ()=>{
   if (!userData?.currentSong) {
